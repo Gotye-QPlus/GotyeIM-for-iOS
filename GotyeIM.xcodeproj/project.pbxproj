@@ -1,0 +1,778 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		261177AE1A25CCBC0095626F /* libgotyeapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 261177AD1A25CCBC0095626F /* libgotyeapi.a */; };
+		D073554019E5354100A64FCC /* GotyeContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073553E19E5354100A64FCC /* GotyeContactCell.xib */; };
+		D07F500519F632AB008DBBE3 /* GotyeRealTimeVoiceController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D07F500319F632AB008DBBE3 /* GotyeRealTimeVoiceController.mm */; };
+		D07F500619F632AB008DBBE3 /* GotyeRealTimeVoiceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D07F500419F632AB008DBBE3 /* GotyeRealTimeVoiceController.xib */; };
+		D0A18E5719D514A90001CFA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A18E5619D514A90001CFA2 /* Foundation.framework */; };
+		D0A18E5919D514A90001CFA2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A18E5819D514A90001CFA2 /* CoreGraphics.framework */; };
+		D0A18E5B19D514A90001CFA2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A18E5A19D514A90001CFA2 /* UIKit.framework */; };
+		D0A18E6119D514A90001CFA2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0A18E5F19D514A90001CFA2 /* InfoPlist.strings */; };
+		D0A18E6319D514A90001CFA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A18E6219D514A90001CFA2 /* main.m */; };
+		D0A18E6719D514A90001CFA2 /* GotyeAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0A18E6619D514A90001CFA2 /* GotyeAppDelegate.mm */; };
+		D0A18E6919D514A90001CFA2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0A18E6819D514A90001CFA2 /* Images.xcassets */; };
+		D0A18E7019D514A90001CFA2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A18E6F19D514A90001CFA2 /* XCTest.framework */; };
+		D0A18E7119D514A90001CFA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A18E5619D514A90001CFA2 /* Foundation.framework */; };
+		D0A18E7219D514A90001CFA2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A18E5A19D514A90001CFA2 /* UIKit.framework */; };
+		D0A3B0D719EB9DAE002956F8 /* GotyeLoginController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0A3B0D519EB9DAE002956F8 /* GotyeLoginController.mm */; };
+		D0A3B0D819EB9DAE002956F8 /* GotyeLoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0A3B0D619EB9DAE002956F8 /* GotyeLoginController.xib */; };
+		D0A3B0EA19EBA49E002956F8 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A3B0E919EBA49E002956F8 /* libstdc++.6.0.9.dylib */; };
+		D0A3B0EC19EBDCAA002956F8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A3B0EB19EBDCAA002956F8 /* AudioToolbox.framework */; };
+		D0A3B0EE19EBDCCA002956F8 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A3B0ED19EBDCCA002956F8 /* libz.1.2.5.dylib */; };
+		D0A4511D1A00BC0600E70359 /* GotyeGroupSearchController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0A4511C1A00BC0600E70359 /* GotyeGroupSearchController.mm */; };
+		D0A451201A00BF4E00E70359 /* GotyeSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A4511F1A00BF4E00E70359 /* GotyeSearchBar.m */; };
+		D0A451241A00D0CF00E70359 /* GotyeSearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0A451231A00D0CF00E70359 /* GotyeSearchBar.xib */; };
+		D0A4E27819FB95B8007D14C2 /* GotyeAddFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0A4E27619FB95B8007D14C2 /* GotyeAddFriendCell.xib */; };
+		D0A595E21A14A3B10091AD65 /* GotyeGroupSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0A595E01A14A3B10091AD65 /* GotyeGroupSearchCell.xib */; };
+		D0BA64FC19D7E07A003F599C /* GotyeSettingViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0BA64FA19D7E07A003F599C /* GotyeSettingViewController.mm */; };
+		D0BA650219D7F544003F599C /* GotyeMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0BA650019D7F544003F599C /* GotyeMessageCell.xib */; };
+		D0BC96DD19FA34F500F23017 /* GotyeSettingManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0BC96DC19FA34F500F23017 /* GotyeSettingManager.mm */; };
+		D0BC96E119FA4C1600F23017 /* GotyeChatRoomSettingController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0BC96E019FA4C1600F23017 /* GotyeChatRoomSettingController.mm */; };
+		D0BDC4C519E639F8001A0AEA /* GotyeGroupCreateController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0BDC4C319E639F8001A0AEA /* GotyeGroupCreateController.mm */; };
+		D0BDC4C619E639F8001A0AEA /* GotyeGroupCreateController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0BDC4C419E639F8001A0AEA /* GotyeGroupCreateController.xib */; };
+		D0BDC4CA19E67AB2001A0AEA /* GotyeGroupSelUserController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0BDC4C819E67AB2001A0AEA /* GotyeGroupSelUserController.mm */; };
+		D0BDC4CE19E68889001A0AEA /* GotyeChatRoomListController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0BDC4CD19E68889001A0AEA /* GotyeChatRoomListController.mm */; };
+		D0BDC4D119E68D82001A0AEA /* GotyeGroupListController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0BDC4D019E68D82001A0AEA /* GotyeGroupListController.mm */; };
+		D0BDC4D319E694F7001A0AEA /* GotyeSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0BDC4D219E694F7001A0AEA /* GotyeSettingViewController.xib */; };
+		D0BF213A1A03563A0041AAAA /* GotyeLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BF21391A03563A0041AAAA /* GotyeLoadingView.m */; };
+		D0BF21401A0356590041AAAA /* GotyeLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0BF213F1A0356590041AAAA /* GotyeLoadingView.xib */; };
+		D0C0C64719EF74D700138544 /* GotyeChatViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0C0C64519EF74D700138544 /* GotyeChatViewController.mm */; };
+		D0C0C64819EF74D700138544 /* GotyeChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0C0C64619EF74D700138544 /* GotyeChatViewController.xib */; };
+		D0C2B3BF1A0A127D002D40A5 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C2B3BE1A0A127D002D40A5 /* MBProgressHUD.m */; };
+		D0C9E03719D9365D00573396 /* GotyeOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C9E03619D9365D00573396 /* GotyeOverlayView.m */; };
+		D0C9E03A19D9373F00573396 /* GotyeContextMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C9E03919D9373F00573396 /* GotyeContextMenuCell.m */; };
+		D0C9E03D19D943E000573396 /* GotyeContextMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C9E03C19D943E000573396 /* GotyeContextMenuTableViewController.m */; };
+		D0C9E04619D945AB00573396 /* GotyeMessageViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0C9E04419D945AB00573396 /* GotyeMessageViewController.mm */; };
+		D0C9E04719D945AB00573396 /* GotyeMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0C9E04519D945AB00573396 /* GotyeMessageViewController.xib */; };
+		D0C9E05219D95E2B00573396 /* GotyeNotifyController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0C9E05019D95E2B00573396 /* GotyeNotifyController.mm */; };
+		D0C9E05819D95F4500573396 /* GotyeNotifyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0C9E05619D95F4500573396 /* GotyeNotifyCell.xib */; };
+		D0C9E05C19D965C000573396 /* GotyeAddFriendController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0C9E05A19D965C000573396 /* GotyeAddFriendController.mm */; };
+		D0D3367919D7A4DA00FC4CF3 /* GotyeUIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D3367819D7A4DA00FC4CF3 /* GotyeUIUtil.m */; };
+		D0D3369319D7B92100FC4CF3 /* GotyeTabViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0D3368F19D7B92100FC4CF3 /* GotyeTabViewController.mm */; };
+		D0D3369819D7D38200FC4CF3 /* GotyeContactViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0D3369619D7D38200FC4CF3 /* GotyeContactViewController.mm */; };
+		D0D3369919D7D38200FC4CF3 /* GotyeContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0D3369719D7D38200FC4CF3 /* GotyeContactViewController.xib */; };
+		D0E2EAB319F0B902001A653E /* GotyeChatBubbleView.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0E2EAB219F0B902001A653E /* GotyeChatBubbleView.mm */; };
+		D0EE774B19F8DEB000879F91 /* GotyeGroupDismissController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0EE774719F8DEB000879F91 /* GotyeGroupDismissController.mm */; };
+		D0EE774C19F8DEB000879F91 /* GotyeGroupDismissController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0EE774819F8DEB000879F91 /* GotyeGroupDismissController.xib */; };
+		D0EE774D19F8DEB000879F91 /* GotyeGroupSettingController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0EE774A19F8DEB000879F91 /* GotyeGroupSettingController.mm */; };
+		D0EE775119F8F58D00879F91 /* GotyeUserInfoController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0EE774F19F8F58D00879F91 /* GotyeUserInfoController.mm */; };
+		D0EE775219F8F58D00879F91 /* GotyeUserInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0EE775019F8F58D00879F91 /* GotyeUserInfoController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D0A18E7319D514A90001CFA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0A18E4B19D514A90001CFA2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0A18E5219D514A90001CFA2;
+			remoteInfo = GotyeIM;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		261177AD1A25CCBC0095626F /* libgotyeapi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgotyeapi.a; path = GotyeIM/GotyeAPI/libgotyeapi.a; sourceTree = "<group>"; };
+		D069F4D91A19A4C400CBDA8A /* Gotye.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gotye.h; sourceTree = "<group>"; };
+		D069F4DA1A19A4C400CBDA8A /* GotyeAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeAPI.h; sourceTree = "<group>"; };
+		D069F4DB1A19A4C400CBDA8A /* GotyeChatTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeChatTarget.h; sourceTree = "<group>"; };
+		D069F4DD1A19A4C400CBDA8A /* GotyeMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeMedia.h; sourceTree = "<group>"; };
+		D069F4DE1A19A4C400CBDA8A /* GotyeNotify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeNotify.h; sourceTree = "<group>"; };
+		D069F4DF1A19A4C400CBDA8A /* GotyeStatusCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeStatusCode.h; sourceTree = "<group>"; };
+		D069F4E01A19A4C400CBDA8A /* GotyeWhineMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeWhineMode.h; sourceTree = "<group>"; };
+		D069F4E31A19A50D00CBDA8A /* GotyeDelegateManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GotyeDelegateManager.h; sourceTree = "<group>"; };
+		D069F4E41A19A54200CBDA8A /* GotyeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GotyeDelegate.h; sourceTree = "<group>"; };
+		D069F4E51A19A55E00CBDA8A /* GotyeMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GotyeMessage.h; sourceTree = "<group>"; };
+		D073553E19E5354100A64FCC /* GotyeContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GotyeContactCell.xib; sourceTree = "<group>"; };
+		D07F500219F632AB008DBBE3 /* GotyeRealTimeVoiceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeRealTimeVoiceController.h; sourceTree = "<group>"; };
+		D07F500319F632AB008DBBE3 /* GotyeRealTimeVoiceController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GotyeRealTimeVoiceController.mm; sourceTree = "<group>"; };
+		D07F500419F632AB008DBBE3 /* GotyeRealTimeVoiceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GotyeRealTimeVoiceController.xib; sourceTree = "<group>"; };
+		D0A18E5319D514A90001CFA2 /* GotyeIM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GotyeIM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0A18E5619D514A90001CFA2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D0A18E5819D514A90001CFA2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D0A18E5A19D514A90001CFA2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D0A18E5E19D514A90001CFA2 /* GotyeIM-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GotyeIM-Info.plist"; sourceTree = "<group>"; };
+		D0A18E6019D514A90001CFA2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D0A18E6219D514A90001CFA2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D0A18E6419D514A90001CFA2 /* GotyeIM-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GotyeIM-Prefix.pch"; sourceTree = "<group>"; };
+		D0A18E6519D514A90001CFA2 /* GotyeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GotyeAppDelegate.h; sourceTree = "<group>"; };
+		D0A18E6619D514A90001CFA2 /* GotyeAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GotyeAppDelegate.mm; sourceTree = "<group>"; };
+		D0A18E6819D514A90001CFA2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D0A18E6E19D514A90001CFA2 /* GotyeIMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GotyeIMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0A18E6F19D514A90001CFA2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D0A3B0D419EB9DAE002956F8 /* GotyeLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeLoginController.h; sourceTree = "<group>"; };
+		D0A3B0D519EB9DAE002956F8 /* GotyeLoginController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GotyeLoginController.mm; sourceTree = "<group>"; };
+		D0A3B0D619EB9DAE002956F8 /* GotyeLoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GotyeLoginController.xib; sourceTree = "<group>"; };
+		D0A3B0E919EBA49E002956F8 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		D0A3B0EB19EBDCAA002956F8 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D0A3B0ED19EBDCCA002956F8 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		D0A4511B1A00BC0600E70359 /* GotyeGroupSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeGroupSearchController.h; sourceTree = "<group>"; };
+		D0A4511C1A00BC0600E70359 /* GotyeGroupSearchController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GotyeGroupSearchController.mm; sourceTree = "<group>"; };
+		D0A4511E1A00BF4E00E70359 /* GotyeSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeSearchBar.h; sourceTree = "<group>"; };
+		D0A4511F1A00BF4E00E70359 /* GotyeSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GotyeSearchBar.m; sourceTree = "<group>"; };
+		D0A451231A00D0CF00E70359 /* GotyeSearchBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GotyeSearchBar.xib; sourceTree = "<group>"; };
+		D0A4E27619FB95B8007D14C2 /* GotyeAddFriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GotyeAddFriendCell.xib; sourceTree = "<group>"; };
+		D0A595E01A14A3B10091AD65 /* GotyeGroupSearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GotyeGroupSearchCell.xib; sourceTree = "<group>"; };
+		D0BA64F919D7E07A003F599C /* GotyeSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeSettingViewController.h; sourceTree = "<group>"; };
+		D0BA64FA19D7E07A003F599C /* GotyeSettingViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GotyeSettingViewController.mm; sourceTree = "<group>"; };
+		D0BA650019D7F544003F599C /* GotyeMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GotyeMessageCell.xib; sourceTree = "<group>"; };
+		D0BC96DB19FA34F500F23017 /* GotyeSettingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeSettingManager.h; sourceTree = "<group>"; };
+		D0BC96DC19FA34F500F23017 /* GotyeSettingManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GotyeSettingManager.mm; sourceTree = "<group>"; };
+		D0BC96DF19FA4C1600F23017 /* GotyeChatRoomSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeChatRoomSettingController.h; sourceTree = "<group>"; };
+		D0BC96E019FA4C1600F23017 /* GotyeChatRoomSettingController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GotyeChatRoomSettingController.mm; sourceTree = "<group>"; };
+		D0BDC4C219E639F8001A0AEA /* GotyeGroupCreateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeGroupCreateController.h; sourceTree = "<group>"; };
+		D0BDC4C319E639F8001A0AEA /* GotyeGroupCreateController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GotyeGroupCreateController.mm; sourceTree = "<group>"; };
+		D0BDC4C419E639F8001A0AEA /* GotyeGroupCreateController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GotyeGroupCreateController.xib; sourceTree = "<group>"; };
+		D0BDC4C719E67AB2001A0AEA /* GotyeGroupSelUserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeGroupSelUserController.h; sourceTree = "<group>"; };
+		D0BDC4C819E67AB2001A0AEA /* GotyeGroupSelUserController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GotyeGroupSelUserController.mm; sourceTree = "<group>"; };
+		D0BDC4CC19E68889001A0AEA /* GotyeChatRoomListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeChatRoomListController.h; sourceTree = "<group>"; };
+		D0BDC4CD19E68889001A0AEA /* GotyeChatRoomListController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GotyeChatRoomListController.mm; sourceTree = "<group>"; };
+		D0BDC4CF19E68D82001A0AEA /* GotyeGroupListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeGroupListController.h; sourceTree = "<group>"; };
+		D0BDC4D019E68D82001A0AEA /* GotyeGroupListController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GotyeGroupListController.mm; sourceTree = "<group>"; };
+		D0BDC4D219E694F7001A0AEA /* GotyeSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GotyeSettingViewController.xib; sourceTree = "<group>"; };
+		D0BF21381A03563A0041AAAA /* GotyeLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeLoadingView.h; sourceTree = "<group>"; };
+		D0BF21391A03563A0041AAAA /* GotyeLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GotyeLoadingView.m; sourceTree = "<group>"; };
+		D0BF213F1A0356590041AAAA /* GotyeLoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GotyeLoadingView.xib; sourceTree = "<group>"; };
+		D0C0C64419EF74D700138544 /* GotyeChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeChatViewController.h; sourceTree = "<group>"; };
+		D0C0C64519EF74D700138544 /* GotyeChatViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GotyeChatViewController.mm; sourceTree = "<group>"; };
+		D0C0C64619EF74D700138544 /* GotyeChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GotyeChatViewController.xib; sourceTree = "<group>"; };
+		D0C2B3BD1A0A127D002D40A5 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		D0C2B3BE1A0A127D002D40A5 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		D0C9E03519D9365D00573396 /* GotyeOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeOverlayView.h; sourceTree = "<group>"; };
+		D0C9E03619D9365D00573396 /* GotyeOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GotyeOverlayView.m; sourceTree = "<group>"; };
+		D0C9E03819D9373F00573396 /* GotyeContextMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeContextMenuCell.h; sourceTree = "<group>"; };
+		D0C9E03919D9373F00573396 /* GotyeContextMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GotyeContextMenuCell.m; sourceTree = "<group>"; };
+		D0C9E03B19D943E000573396 /* GotyeContextMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeContextMenuTableViewController.h; sourceTree = "<group>"; };
+		D0C9E03C19D943E000573396 /* GotyeContextMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GotyeContextMenuTableViewController.m; sourceTree = "<group>"; };
+		D0C9E04319D945AB00573396 /* GotyeMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeMessageViewController.h; sourceTree = "<group>"; };
+		D0C9E04419D945AB00573396 /* GotyeMessageViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GotyeMessageViewController.mm; sourceTree = "<group>"; };
+		D0C9E04519D945AB00573396 /* GotyeMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GotyeMessageViewController.xib; sourceTree = "<group>"; };
+		D0C9E04F19D95E2B00573396 /* GotyeNotifyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeNotifyController.h; sourceTree = "<group>"; };
+		D0C9E05019D95E2B00573396 /* GotyeNotifyController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GotyeNotifyController.mm; sourceTree = "<group>"; };
+		D0C9E05619D95F4500573396 /* GotyeNotifyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GotyeNotifyCell.xib; sourceTree = "<group>"; };
+		D0C9E05919D965C000573396 /* GotyeAddFriendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeAddFriendController.h; sourceTree = "<group>"; };
+		D0C9E05A19D965C000573396 /* GotyeAddFriendController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GotyeAddFriendController.mm; sourceTree = "<group>"; };
+		D0D3367719D7A4DA00FC4CF3 /* GotyeUIUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeUIUtil.h; sourceTree = "<group>"; };
+		D0D3367819D7A4DA00FC4CF3 /* GotyeUIUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GotyeUIUtil.m; sourceTree = "<group>"; };
+		D0D3368E19D7B92100FC4CF3 /* GotyeTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeTabViewController.h; sourceTree = "<group>"; };
+		D0D3368F19D7B92100FC4CF3 /* GotyeTabViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GotyeTabViewController.mm; sourceTree = "<group>"; };
+		D0D3369519D7D38200FC4CF3 /* GotyeContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeContactViewController.h; sourceTree = "<group>"; };
+		D0D3369619D7D38200FC4CF3 /* GotyeContactViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GotyeContactViewController.mm; sourceTree = "<group>"; };
+		D0D3369719D7D38200FC4CF3 /* GotyeContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GotyeContactViewController.xib; sourceTree = "<group>"; };
+		D0E2EAB119F0B902001A653E /* GotyeChatBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeChatBubbleView.h; sourceTree = "<group>"; };
+		D0E2EAB219F0B902001A653E /* GotyeChatBubbleView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GotyeChatBubbleView.mm; sourceTree = "<group>"; };
+		D0EE774619F8DEB000879F91 /* GotyeGroupDismissController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeGroupDismissController.h; sourceTree = "<group>"; };
+		D0EE774719F8DEB000879F91 /* GotyeGroupDismissController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GotyeGroupDismissController.mm; sourceTree = "<group>"; };
+		D0EE774819F8DEB000879F91 /* GotyeGroupDismissController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GotyeGroupDismissController.xib; sourceTree = "<group>"; };
+		D0EE774919F8DEB000879F91 /* GotyeGroupSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeGroupSettingController.h; sourceTree = "<group>"; };
+		D0EE774A19F8DEB000879F91 /* GotyeGroupSettingController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GotyeGroupSettingController.mm; sourceTree = "<group>"; };
+		D0EE774E19F8F58D00879F91 /* GotyeUserInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeUserInfoController.h; sourceTree = "<group>"; };
+		D0EE774F19F8F58D00879F91 /* GotyeUserInfoController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GotyeUserInfoController.mm; sourceTree = "<group>"; };
+		D0EE775019F8F58D00879F91 /* GotyeUserInfoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GotyeUserInfoController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0A18E5019D514A90001CFA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				261177AE1A25CCBC0095626F /* libgotyeapi.a in Frameworks */,
+				D0A3B0EE19EBDCCA002956F8 /* libz.1.2.5.dylib in Frameworks */,
+				D0A3B0EC19EBDCAA002956F8 /* AudioToolbox.framework in Frameworks */,
+				D0A3B0EA19EBA49E002956F8 /* libstdc++.6.0.9.dylib in Frameworks */,
+				D0A18E5919D514A90001CFA2 /* CoreGraphics.framework in Frameworks */,
+				D0A18E5B19D514A90001CFA2 /* UIKit.framework in Frameworks */,
+				D0A18E5719D514A90001CFA2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0A18E6B19D514A90001CFA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0A18E7019D514A90001CFA2 /* XCTest.framework in Frameworks */,
+				D0A18E7219D514A90001CFA2 /* UIKit.framework in Frameworks */,
+				D0A18E7119D514A90001CFA2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D069F4D81A19A4C400CBDA8A /* GotyeAPI */ = {
+			isa = PBXGroup;
+			children = (
+				D069F4D91A19A4C400CBDA8A /* Gotye.h */,
+				D069F4DA1A19A4C400CBDA8A /* GotyeAPI.h */,
+				D069F4DB1A19A4C400CBDA8A /* GotyeChatTarget.h */,
+				D069F4E51A19A55E00CBDA8A /* GotyeMessage.h */,
+				D069F4DD1A19A4C400CBDA8A /* GotyeMedia.h */,
+				D069F4DE1A19A4C400CBDA8A /* GotyeNotify.h */,
+				D069F4DF1A19A4C400CBDA8A /* GotyeStatusCode.h */,
+				D069F4E01A19A4C400CBDA8A /* GotyeWhineMode.h */,
+				D069F4E41A19A54200CBDA8A /* GotyeDelegate.h */,
+				D069F4E31A19A50D00CBDA8A /* GotyeDelegateManager.h */,
+			);
+			path = GotyeAPI;
+			sourceTree = "<group>";
+		};
+		D0A18E4A19D514A90001CFA2 = {
+			isa = PBXGroup;
+			children = (
+				D0A18E5C19D514A90001CFA2 /* GotyeIM */,
+				D0A18E5519D514A90001CFA2 /* Frameworks */,
+				D0A18E5419D514A90001CFA2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D0A18E5419D514A90001CFA2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0A18E5319D514A90001CFA2 /* GotyeIM.app */,
+				D0A18E6E19D514A90001CFA2 /* GotyeIMTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0A18E5519D514A90001CFA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				261177AD1A25CCBC0095626F /* libgotyeapi.a */,
+				D0A3B0ED19EBDCCA002956F8 /* libz.1.2.5.dylib */,
+				D0A3B0EB19EBDCAA002956F8 /* AudioToolbox.framework */,
+				D0A3B0E919EBA49E002956F8 /* libstdc++.6.0.9.dylib */,
+				D0A18E5619D514A90001CFA2 /* Foundation.framework */,
+				D0A18E5819D514A90001CFA2 /* CoreGraphics.framework */,
+				D0A18E5A19D514A90001CFA2 /* UIKit.framework */,
+				D0A18E6F19D514A90001CFA2 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0A18E5C19D514A90001CFA2 /* GotyeIM */ = {
+			isa = PBXGroup;
+			children = (
+				D0A18E6519D514A90001CFA2 /* GotyeAppDelegate.h */,
+				D0A18E6619D514A90001CFA2 /* GotyeAppDelegate.mm */,
+				D0D3367719D7A4DA00FC4CF3 /* GotyeUIUtil.h */,
+				D0D3367819D7A4DA00FC4CF3 /* GotyeUIUtil.m */,
+				D0BC96DB19FA34F500F23017 /* GotyeSettingManager.h */,
+				D0BC96DC19FA34F500F23017 /* GotyeSettingManager.mm */,
+				D0D3368919D7B92100FC4CF3 /* UI */,
+				D069F4D81A19A4C400CBDA8A /* GotyeAPI */,
+				D0A18E6819D514A90001CFA2 /* Images.xcassets */,
+				D0A18E5D19D514A90001CFA2 /* Supporting Files */,
+			);
+			path = GotyeIM;
+			sourceTree = "<group>";
+		};
+		D0A18E5D19D514A90001CFA2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0A18E5E19D514A90001CFA2 /* GotyeIM-Info.plist */,
+				D0A18E5F19D514A90001CFA2 /* InfoPlist.strings */,
+				D0A18E6419D514A90001CFA2 /* GotyeIM-Prefix.pch */,
+				D0A18E6219D514A90001CFA2 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0A3B0D319EB98CA002956F8 /* ChatView */ = {
+			isa = PBXGroup;
+			children = (
+				D0E2EAB119F0B902001A653E /* GotyeChatBubbleView.h */,
+				D0E2EAB219F0B902001A653E /* GotyeChatBubbleView.mm */,
+				D0C0C64419EF74D700138544 /* GotyeChatViewController.h */,
+				D0C0C64519EF74D700138544 /* GotyeChatViewController.mm */,
+				D0C0C64619EF74D700138544 /* GotyeChatViewController.xib */,
+				D07F500219F632AB008DBBE3 /* GotyeRealTimeVoiceController.h */,
+				D07F500319F632AB008DBBE3 /* GotyeRealTimeVoiceController.mm */,
+				D07F500419F632AB008DBBE3 /* GotyeRealTimeVoiceController.xib */,
+			);
+			path = ChatView;
+			sourceTree = "<group>";
+		};
+		D0C9E03019D92F8600573396 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D0C9E03119D9360A00573396 /* ContextMenuTableView */,
+				D0A4511E1A00BF4E00E70359 /* GotyeSearchBar.h */,
+				D0A4511F1A00BF4E00E70359 /* GotyeSearchBar.m */,
+				D0A451231A00D0CF00E70359 /* GotyeSearchBar.xib */,
+				D0BF21381A03563A0041AAAA /* GotyeLoadingView.h */,
+				D0BF21391A03563A0041AAAA /* GotyeLoadingView.m */,
+				D0BF213F1A0356590041AAAA /* GotyeLoadingView.xib */,
+				D0C2B3BD1A0A127D002D40A5 /* MBProgressHUD.h */,
+				D0C2B3BE1A0A127D002D40A5 /* MBProgressHUD.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D0C9E03119D9360A00573396 /* ContextMenuTableView */ = {
+			isa = PBXGroup;
+			children = (
+				D0C9E03B19D943E000573396 /* GotyeContextMenuTableViewController.h */,
+				D0C9E03C19D943E000573396 /* GotyeContextMenuTableViewController.m */,
+				D0C9E03519D9365D00573396 /* GotyeOverlayView.h */,
+				D0C9E03619D9365D00573396 /* GotyeOverlayView.m */,
+				D0C9E03819D9373F00573396 /* GotyeContextMenuCell.h */,
+				D0C9E03919D9373F00573396 /* GotyeContextMenuCell.m */,
+			);
+			path = ContextMenuTableView;
+			sourceTree = "<group>";
+		};
+		D0C9E04E19D95E2B00573396 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				D0C9E05919D965C000573396 /* GotyeAddFriendController.h */,
+				D0C9E05A19D965C000573396 /* GotyeAddFriendController.mm */,
+				D0A4E27619FB95B8007D14C2 /* GotyeAddFriendCell.xib */,
+				D0BDC4CC19E68889001A0AEA /* GotyeChatRoomListController.h */,
+				D0BDC4CD19E68889001A0AEA /* GotyeChatRoomListController.mm */,
+				D0BC96DF19FA4C1600F23017 /* GotyeChatRoomSettingController.h */,
+				D0BC96E019FA4C1600F23017 /* GotyeChatRoomSettingController.mm */,
+				D0BDC4C219E639F8001A0AEA /* GotyeGroupCreateController.h */,
+				D0BDC4C319E639F8001A0AEA /* GotyeGroupCreateController.mm */,
+				D0BDC4C419E639F8001A0AEA /* GotyeGroupCreateController.xib */,
+				D0BDC4C719E67AB2001A0AEA /* GotyeGroupSelUserController.h */,
+				D0BDC4C819E67AB2001A0AEA /* GotyeGroupSelUserController.mm */,
+				D0BDC4CF19E68D82001A0AEA /* GotyeGroupListController.h */,
+				D0BDC4D019E68D82001A0AEA /* GotyeGroupListController.mm */,
+				D0A4511B1A00BC0600E70359 /* GotyeGroupSearchController.h */,
+				D0A4511C1A00BC0600E70359 /* GotyeGroupSearchController.mm */,
+				D0A595E01A14A3B10091AD65 /* GotyeGroupSearchCell.xib */,
+				D0EE774919F8DEB000879F91 /* GotyeGroupSettingController.h */,
+				D0EE774A19F8DEB000879F91 /* GotyeGroupSettingController.mm */,
+				D0EE774619F8DEB000879F91 /* GotyeGroupDismissController.h */,
+				D0EE774719F8DEB000879F91 /* GotyeGroupDismissController.mm */,
+				D0EE774819F8DEB000879F91 /* GotyeGroupDismissController.xib */,
+				D0EE774E19F8F58D00879F91 /* GotyeUserInfoController.h */,
+				D0EE774F19F8F58D00879F91 /* GotyeUserInfoController.mm */,
+				D0EE775019F8F58D00879F91 /* GotyeUserInfoController.xib */,
+				D0C9E04F19D95E2B00573396 /* GotyeNotifyController.h */,
+				D0C9E05019D95E2B00573396 /* GotyeNotifyController.mm */,
+				D0C9E05619D95F4500573396 /* GotyeNotifyCell.xib */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
+		D0D3368919D7B92100FC4CF3 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D0D3368A19D7B92100FC4CF3 /* MainTabView */,
+				D0C9E04E19D95E2B00573396 /* SubView */,
+				D0A3B0D319EB98CA002956F8 /* ChatView */,
+				D0C9E03019D92F8600573396 /* Common */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D0D3368A19D7B92100FC4CF3 /* MainTabView */ = {
+			isa = PBXGroup;
+			children = (
+				D0A3B0D419EB9DAE002956F8 /* GotyeLoginController.h */,
+				D0A3B0D519EB9DAE002956F8 /* GotyeLoginController.mm */,
+				D0A3B0D619EB9DAE002956F8 /* GotyeLoginController.xib */,
+				D0D3368E19D7B92100FC4CF3 /* GotyeTabViewController.h */,
+				D0D3368F19D7B92100FC4CF3 /* GotyeTabViewController.mm */,
+				D0C9E04319D945AB00573396 /* GotyeMessageViewController.h */,
+				D0C9E04419D945AB00573396 /* GotyeMessageViewController.mm */,
+				D0C9E04519D945AB00573396 /* GotyeMessageViewController.xib */,
+				D0BA650019D7F544003F599C /* GotyeMessageCell.xib */,
+				D0D3369519D7D38200FC4CF3 /* GotyeContactViewController.h */,
+				D0D3369619D7D38200FC4CF3 /* GotyeContactViewController.mm */,
+				D0D3369719D7D38200FC4CF3 /* GotyeContactViewController.xib */,
+				D073553E19E5354100A64FCC /* GotyeContactCell.xib */,
+				D0BA64F919D7E07A003F599C /* GotyeSettingViewController.h */,
+				D0BA64FA19D7E07A003F599C /* GotyeSettingViewController.mm */,
+				D0BDC4D219E694F7001A0AEA /* GotyeSettingViewController.xib */,
+			);
+			path = MainTabView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0A18E5219D514A90001CFA2 /* GotyeIM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0A18E7F19D514A90001CFA2 /* Build configuration list for PBXNativeTarget "GotyeIM" */;
+			buildPhases = (
+				D0A18E4F19D514A90001CFA2 /* Sources */,
+				D0A18E5019D514A90001CFA2 /* Frameworks */,
+				D0A18E5119D514A90001CFA2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GotyeIM;
+			productName = GotyeIM;
+			productReference = D0A18E5319D514A90001CFA2 /* GotyeIM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D0A18E6D19D514A90001CFA2 /* GotyeIMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0A18E8219D514A90001CFA2 /* Build configuration list for PBXNativeTarget "GotyeIMTests" */;
+			buildPhases = (
+				D0A18E6A19D514A90001CFA2 /* Sources */,
+				D0A18E6B19D514A90001CFA2 /* Frameworks */,
+				D0A18E6C19D514A90001CFA2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0A18E7419D514A90001CFA2 /* PBXTargetDependency */,
+			);
+			name = GotyeIMTests;
+			productName = GotyeIMTests;
+			productReference = D0A18E6E19D514A90001CFA2 /* GotyeIMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0A18E4B19D514A90001CFA2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Gotye;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Gotye;
+				TargetAttributes = {
+					D0A18E5219D514A90001CFA2 = {
+						DevelopmentTeam = 4KU5YLS7T6;
+					};
+					D0A18E6D19D514A90001CFA2 = {
+						TestTargetID = D0A18E5219D514A90001CFA2;
+					};
+				};
+			};
+			buildConfigurationList = D0A18E4E19D514A90001CFA2 /* Build configuration list for PBXProject "GotyeIM" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D0A18E4A19D514A90001CFA2;
+			productRefGroup = D0A18E5419D514A90001CFA2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0A18E5219D514A90001CFA2 /* GotyeIM */,
+				D0A18E6D19D514A90001CFA2 /* GotyeIMTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0A18E5119D514A90001CFA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0A4E27819FB95B8007D14C2 /* GotyeAddFriendCell.xib in Resources */,
+				D0D3369919D7D38200FC4CF3 /* GotyeContactViewController.xib in Resources */,
+				D0EE774C19F8DEB000879F91 /* GotyeGroupDismissController.xib in Resources */,
+				D073554019E5354100A64FCC /* GotyeContactCell.xib in Resources */,
+				D0BF21401A0356590041AAAA /* GotyeLoadingView.xib in Resources */,
+				D0A3B0D819EB9DAE002956F8 /* GotyeLoginController.xib in Resources */,
+				D0C0C64819EF74D700138544 /* GotyeChatViewController.xib in Resources */,
+				D0A451241A00D0CF00E70359 /* GotyeSearchBar.xib in Resources */,
+				D0BA650219D7F544003F599C /* GotyeMessageCell.xib in Resources */,
+				D0BDC4C619E639F8001A0AEA /* GotyeGroupCreateController.xib in Resources */,
+				D0A595E21A14A3B10091AD65 /* GotyeGroupSearchCell.xib in Resources */,
+				D0A18E6119D514A90001CFA2 /* InfoPlist.strings in Resources */,
+				D0EE775219F8F58D00879F91 /* GotyeUserInfoController.xib in Resources */,
+				D0C9E04719D945AB00573396 /* GotyeMessageViewController.xib in Resources */,
+				D0BDC4D319E694F7001A0AEA /* GotyeSettingViewController.xib in Resources */,
+				D0A18E6919D514A90001CFA2 /* Images.xcassets in Resources */,
+				D0C9E05819D95F4500573396 /* GotyeNotifyCell.xib in Resources */,
+				D07F500619F632AB008DBBE3 /* GotyeRealTimeVoiceController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0A18E6C19D514A90001CFA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0A18E4F19D514A90001CFA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0BA64FC19D7E07A003F599C /* GotyeSettingViewController.mm in Sources */,
+				D0C9E03D19D943E000573396 /* GotyeContextMenuTableViewController.m in Sources */,
+				D0C0C64719EF74D700138544 /* GotyeChatViewController.mm in Sources */,
+				D0BC96E119FA4C1600F23017 /* GotyeChatRoomSettingController.mm in Sources */,
+				D0A3B0D719EB9DAE002956F8 /* GotyeLoginController.mm in Sources */,
+				D0EE774D19F8DEB000879F91 /* GotyeGroupSettingController.mm in Sources */,
+				D0D3367919D7A4DA00FC4CF3 /* GotyeUIUtil.m in Sources */,
+				D0A18E6319D514A90001CFA2 /* main.m in Sources */,
+				D0C9E04619D945AB00573396 /* GotyeMessageViewController.mm in Sources */,
+				D0D3369319D7B92100FC4CF3 /* GotyeTabViewController.mm in Sources */,
+				D0E2EAB319F0B902001A653E /* GotyeChatBubbleView.mm in Sources */,
+				D0BDC4C519E639F8001A0AEA /* GotyeGroupCreateController.mm in Sources */,
+				D0EE775119F8F58D00879F91 /* GotyeUserInfoController.mm in Sources */,
+				D0C9E05C19D965C000573396 /* GotyeAddFriendController.mm in Sources */,
+				D0BDC4CE19E68889001A0AEA /* GotyeChatRoomListController.mm in Sources */,
+				D0D3369819D7D38200FC4CF3 /* GotyeContactViewController.mm in Sources */,
+				D0BF213A1A03563A0041AAAA /* GotyeLoadingView.m in Sources */,
+				D0BDC4D119E68D82001A0AEA /* GotyeGroupListController.mm in Sources */,
+				D07F500519F632AB008DBBE3 /* GotyeRealTimeVoiceController.mm in Sources */,
+				D0C9E03A19D9373F00573396 /* GotyeContextMenuCell.m in Sources */,
+				D0C9E03719D9365D00573396 /* GotyeOverlayView.m in Sources */,
+				D0A4511D1A00BC0600E70359 /* GotyeGroupSearchController.mm in Sources */,
+				D0A18E6719D514A90001CFA2 /* GotyeAppDelegate.mm in Sources */,
+				D0EE774B19F8DEB000879F91 /* GotyeGroupDismissController.mm in Sources */,
+				D0C2B3BF1A0A127D002D40A5 /* MBProgressHUD.m in Sources */,
+				D0BC96DD19FA34F500F23017 /* GotyeSettingManager.mm in Sources */,
+				D0BDC4CA19E67AB2001A0AEA /* GotyeGroupSelUserController.mm in Sources */,
+				D0A451201A00BF4E00E70359 /* GotyeSearchBar.m in Sources */,
+				D0C9E05219D95E2B00573396 /* GotyeNotifyController.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0A18E6A19D514A90001CFA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D0A18E7419D514A90001CFA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0A18E5219D514A90001CFA2 /* GotyeIM */;
+			targetProxy = D0A18E7319D514A90001CFA2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D0A18E5F19D514A90001CFA2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0A18E6019D514A90001CFA2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0A18E7D19D514A90001CFA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D0A18E7E19D514A90001CFA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0A18E8019D514A90001CFA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv7s,
+					armv7,
+				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GotyeIM/GotyeIM-Prefix.pch";
+				INFOPLIST_FILE = "GotyeIM/GotyeIM-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GotyeIM/GotyeAPI",
+					../../proj.ios/GotyeAPI/build/debug,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "e3c5827e-554a-4aa3-a72f-345220ae4e7f";
+				SDKROOT = iphoneos7.1;
+				VALID_ARCHS = "armv7 armv7s";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D0A18E8119D514A90001CFA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv7s,
+					armv7,
+				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GotyeIM/GotyeIM-Prefix.pch";
+				INFOPLIST_FILE = "GotyeIM/GotyeIM-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GotyeIM/GotyeAPI",
+					../../proj.ios/GotyeAPI/build/debug,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "e3c5827e-554a-4aa3-a72f-345220ae4e7f";
+				SDKROOT = iphoneos7.1;
+				VALID_ARCHS = "armv7 armv7s";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D0A18E8319D514A90001CFA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GotyeIM.app/GotyeIM";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GotyeIM/GotyeIM-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GotyeIMTests/GotyeIMTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D0A18E8419D514A90001CFA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GotyeIM.app/GotyeIM";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GotyeIM/GotyeIM-Prefix.pch";
+				INFOPLIST_FILE = "GotyeIMTests/GotyeIMTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0A18E4E19D514A90001CFA2 /* Build configuration list for PBXProject "GotyeIM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0A18E7D19D514A90001CFA2 /* Debug */,
+				D0A18E7E19D514A90001CFA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0A18E7F19D514A90001CFA2 /* Build configuration list for PBXNativeTarget "GotyeIM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0A18E8019D514A90001CFA2 /* Debug */,
+				D0A18E8119D514A90001CFA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0A18E8219D514A90001CFA2 /* Build configuration list for PBXNativeTarget "GotyeIMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0A18E8319D514A90001CFA2 /* Debug */,
+				D0A18E8419D514A90001CFA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0A18E4B19D514A90001CFA2 /* Project object */;
+}
