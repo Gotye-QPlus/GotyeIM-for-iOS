@@ -11,9 +11,7 @@
 #import "GotyeContextMenuTableViewController.h"
 #import "GotyeContextMenuCell.h"
 
-#import "GotyeAPI.h"
-
-USING_NS_GOTYEAPI;
+#import "GotyeOCAPI.h"
 
 @interface GotyeContactViewController : GotyeContextMenuTableViewController
 {
@@ -21,7 +19,7 @@ USING_NS_GOTYEAPI;
     NSArray *sortedKeys;
     NSIndexPath *deletingItem;
     
-    std::vector<GotyeUser> userList;
+    NSArray *userList;
 }
 
 @property (strong, nonatomic) IBOutlet UIView *topView;

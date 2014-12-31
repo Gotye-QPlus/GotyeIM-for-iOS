@@ -8,15 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-#import "GotyeAPI.h"
+#import "GotyeOCAPI.h"
 
-USING_NS_GOTYEAPI;
 
 @interface GotyeAddFriendController : UITableViewController
 {
     NSString *curUserID;
     
-    std::vector<GotyeUser> userlistReceive;
+    NSArray* userlistReceive;
     
     NSInteger searchPageIndex;
     BOOL haveMoreData;

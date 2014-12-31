@@ -11,5 +11,6 @@
 @interface GotyeLoginController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UITextField *textUsername;
+@property (strong, nonatomic) IBOutlet UITextField *textPassword;
 
 @end

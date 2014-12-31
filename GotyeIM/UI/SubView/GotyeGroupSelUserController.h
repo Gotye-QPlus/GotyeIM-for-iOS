@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-#import "GotyeAPI.h"
+#import "GotyeOCAPI.h"
 
-USING_NS_GOTYEAPI;
 
 @interface GotyeGroupSelUserController : UITableViewController
 {
@@ -21,9 +20,11 @@ USING_NS_GOTYEAPI;
     
     NSArray *sortedKeys;
     
-    GotyeGroup newGroup;
+    GotyeOCGroup* newGroup;
+    
+    NSArray *friendList;
 }
 
--(id)initWithGroup:(GotyeGroup)group;
+-(id)initWithGroup:(GotyeOCGroup*)group;
 
 @end

@@ -8,13 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-#import "GotyeAPI.h"
+#import "GotyeOCAPI.h"
 
-USING_NS_GOTYEAPI;
 
 @interface GotyeUserInfoController : UIViewController
 {
-    GotyeUser userTarget;
+    GotyeOCUser* userTarget;
     
     long long groupID;
 }
@@ -28,6 +27,6 @@ USING_NS_GOTYEAPI;
 @property (strong, nonatomic) IBOutlet UIButton *buttonMessage;
 @property (strong, nonatomic) IBOutlet UIButton *buttonKickout;
 
--(id)initWithTarget:(GotyeUser)target groupID:(long long)gID;
+-(id)initWithTarget:(GotyeOCUser*)target groupID:(long long)gID;
 
 @end

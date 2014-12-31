@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-#import "GotyeAPI.h"
+#import "GotyeOCAPI.h"
 
-USING_NS_GOTYEAPI;
 
 @interface GotyeChatViewController : UIViewController
 
@@ -30,6 +29,6 @@ USING_NS_GOTYEAPI;
 @property (strong, nonatomic) IBOutlet UIView *realtimeStartView;
 @property (strong, nonatomic) IBOutlet UILabel *labelRealTimeStart;
 
--(id)initWithTarget:(GotyeChatTarget)target;
+-(id)initWithTarget:(GotyeOCChatTarget*)target;
 
 @end

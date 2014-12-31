@@ -40,7 +40,8 @@
 
 #define ImageFileSizeMax    (1024*1024)
 
-#define NSStringUTF8(string)  [NSString stringWithUTF8String:(string).c_str()]
-#define STDStringUTF8(nsstr)   std::string([nsstr UTF8String])
-
 #define popToRootViewControllerNotification @"popToRootViewControllerNotification"
+
+#define LoginUserNameKey    @"LoginUsername"
+#define LoginPasswordKey    @"LoginPassword"
+#define AutoLoginKey        @"AutoLogin"

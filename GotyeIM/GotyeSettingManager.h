@@ -8,9 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#include "GotyeAPI.h"
-
-USING_NS_GOTYEAPI;
+#import "GotyeOCAPI.h"
 
 #define Setting_key_NickName            @"displayNickname"
 #define Setting_key_Stick               @"stickMessage"

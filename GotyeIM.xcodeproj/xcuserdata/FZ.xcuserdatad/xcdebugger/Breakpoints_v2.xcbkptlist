@@ -9,29 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GotyeIM/UI/ChatView/GotyeChatViewController.mm"
-            timestampString = "437972255.600176"
+            filePath = "../../gotyeapi/classes/network/NetworkManager+TcpResponse.cpp"
+            timestampString = "440930350.18036"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "554"
-            endingLineNumber = "554"
-            landmarkName = "-onSendMessage:message:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../gotyeapi/classes/network/NetworkManager.cpp"
-            timestampString = "438673294.329434"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "407"
-            endingLineNumber = "407"
-            landmarkName = "NetworkManager::getUserDetail(const GotyeChatTarget&amp; target, bool forceRequest)"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "NetworkManager::onPacketArrived(u16 msgId, cpu8 packet, u16 len)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

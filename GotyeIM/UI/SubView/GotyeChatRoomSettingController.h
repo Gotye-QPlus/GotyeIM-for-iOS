@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-#import "GotyeAPI.h"
+#import "GotyeOCAPI.h"
 
-USING_NS_GOTYEAPI;
 
 typedef enum {
     RoomSettingSectionMember,
@@ -21,15 +20,15 @@ typedef enum {
 
 @interface GotyeChatRoomSettingController : UITableViewController
 {
-    GotyeRoom roomTarget;
+    GotyeOCRoom* roomTarget;
     
     UIView *headListView;
 
     NSMutableDictionary *roomSetting;
     
-    std::vector<GotyeUser> roomUserlist;
+    NSArray* roomUserlist;
 }
 
--(id)initWithTarget:(GotyeRoom)target;
+-(id)initWithTarget:(GotyeOCRoom*)target;
 
 @end

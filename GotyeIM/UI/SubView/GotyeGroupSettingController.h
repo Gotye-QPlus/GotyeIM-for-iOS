@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-#import "GotyeAPI.h"
+#import "GotyeOCAPI.h"
 
-USING_NS_GOTYEAPI;
 
 typedef enum {
 	GroupSettingSectionInfo,
@@ -24,26 +23,26 @@ typedef enum {
 
 @interface GotyeGroupSettingController : UITableViewController
 {
-    GotyeGroup groupTarget;
+    GotyeOCGroup* groupTarget;
 
     UIView *headListView;
         
     NSMutableDictionary *groupSetting;
     
-    std::vector<GotyeUser> groupUserlist;
+    NSArray* groupUserlist;
 }
 
--(id)initWithTarget:(GotyeGroup)target;
+-(id)initWithTarget:(GotyeOCGroup*)target;
 
 @end
 
 @interface GotyeGroupNameInputController : UIViewController
 {
-    GotyeGroup groupTarget;
+    GotyeOCGroup* groupTarget;
 
     UITextField *textInput;
 }
 
--(id)initWithTarget:(GotyeGroup)target;
+-(id)initWithTarget:(GotyeOCGroup*)target;
 
 @end

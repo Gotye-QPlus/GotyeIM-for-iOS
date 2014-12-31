@@ -14,6 +14,9 @@
 
 @interface GotyeMessageViewController : GotyeContextMenuTableViewController
 
+@property (strong, nonatomic) IBOutlet UIView *viewNetworkFail;
+@property (strong, nonatomic) IBOutlet UILabel *labelNetwork;
+
 @end
 
 @interface GotyeMessageCell : GotyeContextMenuCell

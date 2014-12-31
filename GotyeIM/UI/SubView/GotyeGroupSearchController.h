@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-#import "GotyeAPI.h"
+#import "GotyeOCAPI.h"
 
-USING_NS_GOTYEAPI;
 
 @interface GotyeGroupSearchController : UITableViewController
 {
-    std::vector<GotyeGroup> grouplistReceive;
-    std::vector<bool> requestSend;
+    NSArray* grouplistReceive;
+    NSArray* grouplistlocal;
+    NSMutableArray* requestSend;
     
     NSInteger searchPageIndex;
     BOOL haveMoreData;

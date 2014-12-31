@@ -22,6 +22,10 @@
       "idiom" : "universal",
       "filename" : "button_gray.png",
       "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {

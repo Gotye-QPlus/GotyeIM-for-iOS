@@ -15,6 +15,8 @@
 {
     NSArray *messageArray;
     
+    NSArray *notifylist;
+    
     NSInteger processingIndex;
 }
 

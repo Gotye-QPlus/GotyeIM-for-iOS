@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-#import "GotyeAPI.h"
+#import "GotyeOCAPI.h"
 
-USING_NS_GOTYEAPI;
 
 @interface GotyeRealTimeVoiceController : UIViewController
 {
@@ -18,7 +17,7 @@ USING_NS_GOTYEAPI;
     
     NSString *talkingUserID;
     
-    std::vector<GotyeUser> roomUserlist;
+    NSArray* roomUserlist;
 }
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollViewUsers;

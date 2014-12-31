@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-#import "GotyeAPI.h"
+#import "GotyeOCAPI.h"
 
-USING_NS_GOTYEAPI;
 
 @interface GotyeChatBubbleView : UIView
 
@@ -19,8 +18,8 @@ USING_NS_GOTYEAPI;
 #define bubbleThumbImageTag     10002
 #define bubbleMessageButtonTag  10003
 
-+(NSInteger)getbubbleHeight:(GotyeMessage)message showDate:(BOOL)showDate;
++(NSInteger)getbubbleHeight:(GotyeOCMessage*)message showDate:(BOOL)showDate;
 
-+(UIView*)BubbleWithMessage:(GotyeMessage)message showDate:(BOOL)showDate;
++(UIView*)BubbleWithMessage:(GotyeOCMessage*)message showDate:(BOOL)showDate;
 
 @end

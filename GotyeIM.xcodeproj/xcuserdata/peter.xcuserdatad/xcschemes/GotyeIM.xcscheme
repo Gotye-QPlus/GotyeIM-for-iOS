@@ -14,20 +14,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "26F539CC1962575E008420AD"
-               BuildableName = "libGotyeAPI.a"
-               BlueprintName = "GotyeAPI"
-               ReferencedContainer = "container:../../proj.ios/GotyeAPI/GotyeAPI.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "D0A18E5219D514A90001CFA2"
                BuildableName = "GotyeIM.app"
                BlueprintName = "GotyeIM"

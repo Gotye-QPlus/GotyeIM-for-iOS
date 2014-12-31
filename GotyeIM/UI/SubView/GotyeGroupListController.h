@@ -8,13 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-#import "GotyeAPI.h"
+#import "GotyeOCAPI.h"
 
-USING_NS_GOTYEAPI;
 
 @interface GotyeGroupListController : UITableViewController
 {
-    const std::vector<GotyeGroup> *grouplistReceive;
+    NSArray *grouplistReceive;
 }
 
 @end

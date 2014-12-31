@@ -8,15 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-#import "GotyeAPI.h"
+#import "GotyeOCAPI.h"
 
-USING_NS_GOTYEAPI;
 
 @interface GotyeChatRoomListController : UITableViewController
 {
     NSInteger selectedRow;
     
-    const std::vector<GotyeRoom> *roomlistReceive;
+    NSArray *roomlistReceive;
     
     NSInteger searchPageIndex;
     BOOL haveMoreData;

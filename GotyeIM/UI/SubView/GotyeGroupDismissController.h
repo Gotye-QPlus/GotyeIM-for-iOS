@@ -8,21 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-#import "GotyeAPI.h"
+#import "GotyeOCAPI.h"
 
-USING_NS_GOTYEAPI;
 
 @interface GotyeGroupDismissController : UIViewController
 {
-    GotyeGroup groupTarget;
+    GotyeOCGroup* groupTarget;
     
-    std::vector<GotyeUser> groupUserlist;
+    NSArray* groupUserlist;
 }
 
 @property (strong, nonatomic) IBOutlet UIView *headListView;
 @property (strong, nonatomic) IBOutlet UIButton *changeButton;
 @property (strong, nonatomic) IBOutlet UIButton *dismissButton;
 
--(id)initWithTarget:(GotyeGroup)target userList:(std::vector<GotyeUser>)list;
+-(id)initWithTarget:(GotyeOCGroup*)target userList:(NSArray*)list;
 
 @end
