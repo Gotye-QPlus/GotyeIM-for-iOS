@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4326CA7A1A539FCF0045B57D /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		43CC14671A5F878C008CDFF7 /* libgotyeapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CC14661A5F878C008CDFF7 /* libgotyeapi.a */; };
 		D073554019E5354100A64FCC /* GotyeContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D073553E19E5354100A64FCC /* GotyeContactCell.xib */; };
 		D07F500519F632AB008DBBE3 /* GotyeRealTimeVoiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D07F500319F632AB008DBBE3 /* GotyeRealTimeVoiceController.m */; };
 		D07F500619F632AB008DBBE3 /* GotyeRealTimeVoiceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D07F500419F632AB008DBBE3 /* GotyeRealTimeVoiceController.xib */; };
@@ -17,7 +19,7 @@
 		D0A18E6319D514A90001CFA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A18E6219D514A90001CFA2 /* main.m */; };
 		D0A18E6719D514A90001CFA2 /* GotyeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A18E6619D514A90001CFA2 /* GotyeAppDelegate.m */; };
 		D0A18E6919D514A90001CFA2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0A18E6819D514A90001CFA2 /* Images.xcassets */; };
-		D0A3B0D719EB9DAE002956F8 /* GotyeLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A3B0D519EB9DAE002956F8 /* GotyeLoginController.m */; };
+		D0A3B0D719EB9DAE002956F8 /* GotyeLoginController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0A3B0D519EB9DAE002956F8 /* GotyeLoginController.mm */; };
 		D0A3B0D819EB9DAE002956F8 /* GotyeLoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0A3B0D619EB9DAE002956F8 /* GotyeLoginController.xib */; };
 		D0A3B0EA19EBA49E002956F8 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A3B0E919EBA49E002956F8 /* libstdc++.6.0.9.dylib */; };
 		D0A3B0EC19EBDCAA002956F8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A3B0EB19EBDCAA002956F8 /* AudioToolbox.framework */; };
@@ -55,10 +57,13 @@
 		D0D3369819D7D38200FC4CF3 /* GotyeContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D3369619D7D38200FC4CF3 /* GotyeContactViewController.m */; };
 		D0D3369919D7D38200FC4CF3 /* GotyeContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0D3369719D7D38200FC4CF3 /* GotyeContactViewController.xib */; };
 		D0D5798D1A36A1E900AE4F1F /* XCode6Patch.c in Sources */ = {isa = PBXBuildFile; fileRef = D0D5798B1A36A1E900AE4F1F /* XCode6Patch.c */; };
-		D0D5799D1A36CC3000AE4F1F /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D5799C1A36CC3000AE4F1F /* iflyMSC.framework */; };
 		D0D579A11A36E06900AE4F1F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D579A01A36E06900AE4F1F /* AVFoundation.framework */; };
 		D0D579A31A36E08D00AE4F1F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D579A21A36E08D00AE4F1F /* SystemConfiguration.framework */; };
-		D0DC490D1A52CD300060A4EE /* libgotyeapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DC490C1A52CD300060A4EE /* libgotyeapi.a */; };
+		D0DC1FA11A5CE2F900E5DAEC /* libBDVoiceRecognitionClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DC1FA01A5CE2F900E5DAEC /* libBDVoiceRecognitionClient.a */; };
+		D0DC1FAC1A5D09DF00E5DAEC /* CADebugMacros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0DC1FA51A5D09DF00E5DAEC /* CADebugMacros.cpp */; };
+		D0DC1FAD1A5D09DF00E5DAEC /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0DC1FA81A5D09DF00E5DAEC /* CAStreamBasicDescription.cpp */; };
+		D0DC1FAE1A5D09DF00E5DAEC /* CAXException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0DC1FAA1A5D09DF00E5DAEC /* CAXException.cpp */; };
+		D0DC1FB21A5D09E900E5DAEC /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DC1FB11A5D09E900E5DAEC /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D0E2EAB319F0B902001A653E /* GotyeChatBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E2EAB219F0B902001A653E /* GotyeChatBubbleView.m */; };
 		D0EC51481A3FFEAE00A637C4 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EC51471A3FFEAE00A637C4 /* libstdc++.dylib */; };
 		D0EE774B19F8DEB000879F91 /* GotyeGroupDismissController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EE774719F8DEB000879F91 /* GotyeGroupDismissController.m */; };
@@ -69,6 +74,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4326CA701A52C32F0045B57D /* libgotyeapi_.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgotyeapi_.a; path = ../../deployment/1230/gotyeapi_ex_v3.0_20141230_ios/libs/libgotyeapi_.a; sourceTree = "<group>"; };
+		4326CA721A52C3CD0045B57D /* libgotyeapi_c++11.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libgotyeapi_c++11.a"; path = "../../deployment/1230/gotyeapi_ex_v3.0_20141230_ios/libs/libgotyeapi_c++11.a"; sourceTree = "<group>"; };
+		43CC14641A5F86BA008CDFF7 /* libgotyeapi_c++11.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libgotyeapi_c++11.a"; path = "GotyeIM/GotyeAPI/libgotyeapi_c++11.a"; sourceTree = "<group>"; };
+		43CC14661A5F878C008CDFF7 /* libgotyeapi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgotyeapi.a; path = GotyeIM/GotyeAPI/libgotyeapi.a; sourceTree = "<group>"; };
 		D073553E19E5354100A64FCC /* GotyeContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GotyeContactCell.xib; sourceTree = "<group>"; };
 		D07F500219F632AB008DBBE3 /* GotyeRealTimeVoiceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeRealTimeVoiceController.h; sourceTree = "<group>"; };
 		D07F500319F632AB008DBBE3 /* GotyeRealTimeVoiceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GotyeRealTimeVoiceController.m; sourceTree = "<group>"; };
@@ -85,7 +94,7 @@
 		D0A18E6619D514A90001CFA2 /* GotyeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GotyeAppDelegate.m; sourceTree = "<group>"; };
 		D0A18E6819D514A90001CFA2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D0A3B0D419EB9DAE002956F8 /* GotyeLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeLoginController.h; sourceTree = "<group>"; };
-		D0A3B0D519EB9DAE002956F8 /* GotyeLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GotyeLoginController.m; sourceTree = "<group>"; };
+		D0A3B0D519EB9DAE002956F8 /* GotyeLoginController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GotyeLoginController.mm; sourceTree = "<group>"; };
 		D0A3B0D619EB9DAE002956F8 /* GotyeLoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GotyeLoginController.xib; sourceTree = "<group>"; };
 		D0A3B0E919EBA49E002956F8 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 		D0A3B0EB19EBDCAA002956F8 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -144,7 +153,6 @@
 		D0D3369619D7D38200FC4CF3 /* GotyeContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GotyeContactViewController.m; sourceTree = "<group>"; };
 		D0D3369719D7D38200FC4CF3 /* GotyeContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GotyeContactViewController.xib; sourceTree = "<group>"; };
 		D0D5798B1A36A1E900AE4F1F /* XCode6Patch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = XCode6Patch.c; sourceTree = "<group>"; };
-		D0D5799C1A36CC3000AE4F1F /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iflyMSC.framework; path = GotyeIM/iflyMSC.framework; sourceTree = "<group>"; };
 		D0D579A01A36E06900AE4F1F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D0D579A21A36E08D00AE4F1F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D0D7A8A01A3E8C06008E7CCB /* GotyeOCAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GotyeOCAPI.h; sourceTree = "<group>"; };
@@ -154,7 +162,19 @@
 		D0D7A8A41A3E8C06008E7CCB /* GotyeOCMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GotyeOCMessage.h; sourceTree = "<group>"; };
 		D0D7A8A51A3E8C06008E7CCB /* GotyeOCNotify.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GotyeOCNotify.h; sourceTree = "<group>"; };
 		D0D7A8A61A3E8C06008E7CCB /* GotyeOCStatusCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GotyeOCStatusCode.h; sourceTree = "<group>"; };
-		D0DC490C1A52CD300060A4EE /* libgotyeapi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgotyeapi.a; path = GotyeIM/GotyeAPI/libgotyeapi.a; sourceTree = "<group>"; };
+		D0DC1F9F1A5CE2F900E5DAEC /* BDVRRawDataRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDVRRawDataRecognizer.h; sourceTree = "<group>"; };
+		D0DC1FA01A5CE2F900E5DAEC /* libBDVoiceRecognitionClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBDVoiceRecognitionClient.a; sourceTree = "<group>"; };
+		D0DC1FA21A5CFF3000E5DAEC /* BDVoiceRecognitionClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDVoiceRecognitionClient.h; sourceTree = "<group>"; };
+		D0DC1FA31A5CFFED00E5DAEC /* BDVRFileRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDVRFileRecognizer.h; sourceTree = "<group>"; };
+		D0DC1FA51A5D09DF00E5DAEC /* CADebugMacros.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugMacros.cpp; sourceTree = "<group>"; };
+		D0DC1FA61A5D09DF00E5DAEC /* CADebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugMacros.h; sourceTree = "<group>"; };
+		D0DC1FA71A5D09DF00E5DAEC /* CAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAMath.h; sourceTree = "<group>"; };
+		D0DC1FA81A5D09DF00E5DAEC /* CAStreamBasicDescription.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAStreamBasicDescription.cpp; sourceTree = "<group>"; };
+		D0DC1FA91A5D09DF00E5DAEC /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
+		D0DC1FAA1A5D09DF00E5DAEC /* CAXException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAXException.cpp; sourceTree = "<group>"; };
+		D0DC1FAB1A5D09DF00E5DAEC /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
+		D0DC1FB01A5D09E900E5DAEC /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		D0DC1FB11A5D09E900E5DAEC /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		D0E2EAB119F0B902001A653E /* GotyeChatBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotyeChatBubbleView.h; sourceTree = "<group>"; };
 		D0E2EAB219F0B902001A653E /* GotyeChatBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GotyeChatBubbleView.m; sourceTree = "<group>"; };
 		D0EC51471A3FFEAE00A637C4 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
@@ -173,15 +193,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43CC14671A5F878C008CDFF7 /* libgotyeapi.a in Frameworks */,
 				D0EC51481A3FFEAE00A637C4 /* libstdc++.dylib in Frameworks */,
 				D0D579A31A36E08D00AE4F1F /* SystemConfiguration.framework in Frameworks */,
 				D0D579A11A36E06900AE4F1F /* AVFoundation.framework in Frameworks */,
+				4326CA7A1A539FCF0045B57D /* (null) in Frameworks */,
 				D0A3B0EE19EBDCCA002956F8 /* libz.1.2.5.dylib in Frameworks */,
 				D0A3B0EC19EBDCAA002956F8 /* AudioToolbox.framework in Frameworks */,
-				D0DC490D1A52CD300060A4EE /* libgotyeapi.a in Frameworks */,
 				D0A3B0EA19EBA49E002956F8 /* libstdc++.6.0.9.dylib in Frameworks */,
+				D0DC1FA11A5CE2F900E5DAEC /* libBDVoiceRecognitionClient.a in Frameworks */,
 				D0A18E5919D514A90001CFA2 /* CoreGraphics.framework in Frameworks */,
-				D0D5799D1A36CC3000AE4F1F /* iflyMSC.framework in Frameworks */,
 				D0A18E5B19D514A90001CFA2 /* UIKit.framework in Frameworks */,
 				D0A18E5719D514A90001CFA2 /* Foundation.framework in Frameworks */,
 			);
@@ -224,11 +245,13 @@
 		D0A18E5519D514A90001CFA2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D0DC490C1A52CD300060A4EE /* libgotyeapi.a */,
+				43CC14661A5F878C008CDFF7 /* libgotyeapi.a */,
+				43CC14641A5F86BA008CDFF7 /* libgotyeapi_c++11.a */,
+				4326CA721A52C3CD0045B57D /* libgotyeapi_c++11.a */,
+				4326CA701A52C32F0045B57D /* libgotyeapi_.a */,
 				D0EC51471A3FFEAE00A637C4 /* libstdc++.dylib */,
 				D0D579A21A36E08D00AE4F1F /* SystemConfiguration.framework */,
 				D0D579A01A36E06900AE4F1F /* AVFoundation.framework */,
-				D0D5799C1A36CC3000AE4F1F /* iflyMSC.framework */,
 				D0A3B0ED19EBDCCA002956F8 /* libz.1.2.5.dylib */,
 				D0A3B0EB19EBDCAA002956F8 /* AudioToolbox.framework */,
 				D0A3B0E919EBA49E002956F8 /* libstdc++.6.0.9.dylib */,
@@ -250,6 +273,7 @@
 				D0BC96DC19FA34F500F23017 /* GotyeSettingManager.m */,
 				D0D5798B1A36A1E900AE4F1F /* XCode6Patch.c */,
 				D0D3368919D7B92100FC4CF3 /* UI */,
+				D0DC1F9E1A5CE2F900E5DAEC /* BDVoice */,
 				D069F4D81A19A4C400CBDA8A /* GotyeAPI */,
 				D0A18E6819D514A90001CFA2 /* Images.xcassets */,
 				D0A18E5D19D514A90001CFA2 /* Supporting Files */,
@@ -362,7 +386,7 @@
 			isa = PBXGroup;
 			children = (
 				D0A3B0D419EB9DAE002956F8 /* GotyeLoginController.h */,
-				D0A3B0D519EB9DAE002956F8 /* GotyeLoginController.m */,
+				D0A3B0D519EB9DAE002956F8 /* GotyeLoginController.mm */,
 				D0A3B0D619EB9DAE002956F8 /* GotyeLoginController.xib */,
 				D0D3368E19D7B92100FC4CF3 /* GotyeTabViewController.h */,
 				D0D3368F19D7B92100FC4CF3 /* GotyeTabViewController.m */,
@@ -379,6 +403,42 @@
 				D0BDC4D219E694F7001A0AEA /* GotyeSettingViewController.xib */,
 			);
 			path = MainTabView;
+			sourceTree = "<group>";
+		};
+		D0DC1F9E1A5CE2F900E5DAEC /* BDVoice */ = {
+			isa = PBXGroup;
+			children = (
+				D0DC1FA41A5D09DF00E5DAEC /* CoreAudioUtility */,
+				D0DC1FAF1A5D09E900E5DAEC /* JSONKit-master */,
+				D0DC1FA21A5CFF3000E5DAEC /* BDVoiceRecognitionClient.h */,
+				D0DC1FA31A5CFFED00E5DAEC /* BDVRFileRecognizer.h */,
+				D0DC1F9F1A5CE2F900E5DAEC /* BDVRRawDataRecognizer.h */,
+				D0DC1FA01A5CE2F900E5DAEC /* libBDVoiceRecognitionClient.a */,
+			);
+			path = BDVoice;
+			sourceTree = "<group>";
+		};
+		D0DC1FA41A5D09DF00E5DAEC /* CoreAudioUtility */ = {
+			isa = PBXGroup;
+			children = (
+				D0DC1FA51A5D09DF00E5DAEC /* CADebugMacros.cpp */,
+				D0DC1FA61A5D09DF00E5DAEC /* CADebugMacros.h */,
+				D0DC1FA71A5D09DF00E5DAEC /* CAMath.h */,
+				D0DC1FA81A5D09DF00E5DAEC /* CAStreamBasicDescription.cpp */,
+				D0DC1FA91A5D09DF00E5DAEC /* CAStreamBasicDescription.h */,
+				D0DC1FAA1A5D09DF00E5DAEC /* CAXException.cpp */,
+				D0DC1FAB1A5D09DF00E5DAEC /* CAXException.h */,
+			);
+			path = CoreAudioUtility;
+			sourceTree = "<group>";
+		};
+		D0DC1FAF1A5D09E900E5DAEC /* JSONKit-master */ = {
+			isa = PBXGroup;
+			children = (
+				D0DC1FB01A5D09E900E5DAEC /* JSONKit.h */,
+				D0DC1FB11A5D09E900E5DAEC /* JSONKit.m */,
+			);
+			path = "JSONKit-master";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,7 +472,7 @@
 				ORGANIZATIONNAME = Gotye;
 				TargetAttributes = {
 					D0A18E5219D514A90001CFA2 = {
-						DevelopmentTeam = SFDJ2JZF9C;
+						DevelopmentTeam = F2ZW285EQ2;
 					};
 				};
 			};
@@ -466,15 +526,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0DC1FAE1A5D09DF00E5DAEC /* CAXException.cpp in Sources */,
 				D0BA64FC19D7E07A003F599C /* GotyeSettingViewController.m in Sources */,
 				D0D5798D1A36A1E900AE4F1F /* XCode6Patch.c in Sources */,
 				D0C9E03D19D943E000573396 /* GotyeContextMenuTableViewController.m in Sources */,
+				D0DC1FB21A5D09E900E5DAEC /* JSONKit.m in Sources */,
+				D0DC1FAD1A5D09DF00E5DAEC /* CAStreamBasicDescription.cpp in Sources */,
 				D0C0C64719EF74D700138544 /* GotyeChatViewController.m in Sources */,
 				D0BC96E119FA4C1600F23017 /* GotyeChatRoomSettingController.m in Sources */,
-				D0A3B0D719EB9DAE002956F8 /* GotyeLoginController.m in Sources */,
+				D0A3B0D719EB9DAE002956F8 /* GotyeLoginController.mm in Sources */,
 				D0EE774D19F8DEB000879F91 /* GotyeGroupSettingController.m in Sources */,
 				D0D3367919D7A4DA00FC4CF3 /* GotyeUIUtil.m in Sources */,
 				D0A18E6319D514A90001CFA2 /* main.m in Sources */,
+				D0DC1FAC1A5D09DF00E5DAEC /* CADebugMacros.cpp in Sources */,
 				D0C9E04619D945AB00573396 /* GotyeMessageViewController.m in Sources */,
 				D0D3369319D7B92100FC4CF3 /* GotyeTabViewController.m in Sources */,
 				D0E2EAB319F0B902001A653E /* GotyeChatBubbleView.m in Sources */,
@@ -603,9 +667,14 @@
 				GCC_PREFIX_HEADER = "GotyeIM/GotyeIM-Prefix.pch";
 				INFOPLIST_FILE = "GotyeIM/GotyeIM-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LIBRARY_SEARCH_PATHS = ./GotyeIM/GotyeAPI;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					./GotyeIM/GotyeAPI,
+					"$(PROJECT_DIR)/GotyeIM/BDVoice",
+					"$(PROJECT_DIR)/GotyeIM/GotyeAPI",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7326bc13-23fc-4360-959d-3a747934b3f7";
+				PROVISIONING_PROFILE = "175fce6f-c61d-4e36-ac74-f3955c25ed2a";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
@@ -632,9 +701,14 @@
 				GCC_PREFIX_HEADER = "GotyeIM/GotyeIM-Prefix.pch";
 				INFOPLIST_FILE = "GotyeIM/GotyeIM-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LIBRARY_SEARCH_PATHS = ./GotyeIM/GotyeAPI;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					./GotyeIM/GotyeAPI,
+					"$(PROJECT_DIR)/GotyeIM/BDVoice",
+					"$(PROJECT_DIR)/GotyeIM/GotyeAPI",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7326bc13-23fc-4360-959d-3a747934b3f7";
+				PROVISIONING_PROFILE = "540eeb24-1a64-4e5f-959a-abc91f3f9cf0";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;

@@ -90,6 +90,19 @@
     sessionList = [GotyeOCAPI getSessionList];
 
     [self.tableView reloadData];
+    
+    [self setTabBarItemIcon];
+}
+
+- (void)setTabBarItemIcon
+{
+    NSInteger unreadCount = [GotyeOCAPI getTotalUnreadMessageCount] + [GotyeOCAPI getUnreadNotifyCount];
+    if(unreadCount > 99) unreadCount = 99;
+    
+    if(unreadCount > 0)
+        self.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d", unreadCount];
+    else
+        self.tabBarItem.badgeValue = nil;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -131,6 +144,8 @@
 
 -(void)onReceiveMessage:(GotyeOCMessage *)message downloadMediaIfNeed:(bool *)downloadMediaIfNeed
 {
+    [self setTabBarItemIcon];
+    
     if(!isTabTop)
         return;
     
@@ -151,6 +166,8 @@
 
 -(void)onGetMessageList:(GotyeStatusCode)code msglist:(NSArray *)msglist downloadMediaIfNeed:(bool *)downloadMediaIfNeed
 {
+    [self setTabBarItemIcon];
+    
     if(!isTabTop)
         return;
     
@@ -420,7 +437,7 @@
         {
             NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
             GotyeOCChatTarget* target = sessionList[indexPath.row];
-            [GotyeOCAPI deleteSession:target];
+            [GotyeOCAPI deleteSession:target alsoRemoveMessages: NO];
             
             notifyList = [GotyeOCAPI getNotifyList];
             sessionList = [GotyeOCAPI getSessionList];

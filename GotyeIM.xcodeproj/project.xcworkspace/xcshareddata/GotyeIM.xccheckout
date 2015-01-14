@@ -10,36 +10,31 @@
 	<string>GotyeIM</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>50cbe5fa-67d4-dc42-94d9-000c24c5d4ba++7674</key>
-		<string>https://192.168.1.18/svn/QINPLUS_SDK_VER2/Client/c++/trunk</string>
+		<key>C3CF414AC09177C19C59C3E6CE044A483D75BB43</key>
+		<string>https://github.com/Gotye-QPlus/GotyeIM-for-iOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>proj.ios.IM/GotyeIM/GotyeIM.xcodeproj</string>
+	<string>GotyeIM.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>50cbe5fa-67d4-dc42-94d9-000c24c5d4ba++7674</key>
-		<string>../../../..</string>
-	</dict>
-	<key>IDESourceControlProjectRepositoryRootDictionary</key>
-	<dict>
-		<key>50cbe5fa-67d4-dc42-94d9-000c24c5d4ba++7674</key>
-		<string>https://192.168.1.18/svn/QINPLUS_SDK_VER2</string>
+		<key>C3CF414AC09177C19C59C3E6CE044A483D75BB43</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://192.168.1.18/svn/QINPLUS_SDK_VER2/Client/c++/trunk/proj.ios.IM/GotyeIM/GotyeIM.xcodeproj</string>
+	<string>https://github.com/Gotye-QPlus/GotyeIM-for-iOS.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>50cbe5fa-67d4-dc42-94d9-000c24c5d4ba++7674</string>
+	<string>C3CF414AC09177C19C59C3E6CE044A483D75BB43</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.subversion</string>
+			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>50cbe5fa-67d4-dc42-94d9-000c24c5d4ba++7674</string>
+			<string>C3CF414AC09177C19C59C3E6CE044A483D75BB43</string>
 			<key>IDESourceControlWCCName</key>
-			<string>QinV2Cpp</string>
+			<string>GotyeIM</string>
 		</dict>
 	</array>
 </dict>

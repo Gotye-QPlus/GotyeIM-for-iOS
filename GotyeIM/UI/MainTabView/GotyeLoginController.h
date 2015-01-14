@@ -13,4 +13,11 @@
 @property (strong, nonatomic) IBOutlet UITextField *textUsername;
 @property (strong, nonatomic) IBOutlet UITextField *textPassword;
 
+@property (strong, nonatomic) IBOutlet UIScrollView *contentView;
+@property (strong, nonatomic) IBOutlet UITableView *appkeyTable;
+@property (strong, nonatomic) IBOutlet UITableView *serverTable;
+@property (strong, nonatomic) IBOutlet UITextField *textAppkey;
+@property (strong, nonatomic) IBOutlet UITextField *textServer;
+@property (strong, nonatomic) IBOutlet UITextField *textPort;
+
 @end

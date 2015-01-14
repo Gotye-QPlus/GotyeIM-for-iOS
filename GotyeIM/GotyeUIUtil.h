@@ -45,3 +45,8 @@
 #define LoginUserNameKey    @"LoginUsername"
 #define LoginPasswordKey    @"LoginPassword"
 #define AutoLoginKey        @"AutoLogin"
+
+#define AppkeySelectedKey   @"AppkeySelected"
+#define AppkeyRecentKey     @"AppkeyRecent"
+#define ServerSelectedKey   @"ServerSelected"
+#define ServerRecentKey     @"ServerRecent"

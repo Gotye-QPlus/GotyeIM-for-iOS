@@ -37,6 +37,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [GotyeOCAPI addListener:self];
+    
+    [GotyeOCAPI clearNotifyUnreadStatus];
 }
 
 - (void)viewWillDisappear:(BOOL)animated

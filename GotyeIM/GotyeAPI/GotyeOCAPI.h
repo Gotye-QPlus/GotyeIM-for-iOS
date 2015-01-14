@@ -391,7 +391,7 @@
 /**
  * @summary: delete a session
  */
-+(void)deleteSession:(GotyeOCChatTarget*)target;
++(void)deleteSession:(GotyeOCChatTarget*)target alsoRemoveMessages:(BOOL)remove;
 
 /**
  * @summary: mark session as top, this will change the order of the indicated session to 1st.

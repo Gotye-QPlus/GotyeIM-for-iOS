@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GotyeLoginController">
             <connections>
+                <outlet property="appkeyTable" destination="54C-GC-gom" id="hi9-Pi-GwO"/>
+                <outlet property="contentView" destination="EfV-aP-fiP" id="lTl-qE-gQ4"/>
+                <outlet property="serverTable" destination="zAN-C8-hmP" id="HdV-Zg-aO0"/>
+                <outlet property="textAppkey" destination="jOF-zK-jmp" id="Wia-bo-nQg"/>
                 <outlet property="textPassword" destination="zoN-xC-D0q" id="STB-Px-25x"/>
+                <outlet property="textPort" destination="Vpr-fd-YFN" id="dzO-N0-4Cj"/>
+                <outlet property="textServer" destination="Vfu-tq-FT4" id="D62-tG-zS4"/>
                 <outlet property="textUsername" destination="u3A-ST-cKY" id="QKR-Cz-tMQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -17,48 +22,179 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入用户名" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u3A-ST-cKY">
-                    <rect key="frame" x="20" y="158" width="280" height="30"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                    <connections>
-                        <action selector="doneClick:" destination="-1" eventType="editingDidEndOnExit" id="MFf-bB-QGh"/>
-                    </connections>
-                </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入密码" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zoN-xC-D0q">
-                    <rect key="frame" x="20" y="203" width="280" height="30"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
-                    <connections>
-                        <action selector="doneClick:" destination="-1" eventType="editingDidEndOnExit" id="9xQ-2L-Xxa"/>
-                    </connections>
-                </textField>
-                <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rl7-r7-Y6Q">
-                    <rect key="frame" x="20" y="259" width="280" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <state key="normal" title="登录" backgroundImage="button_white">
-                        <color key="titleColor" red="0.058823529411764705" green="0.83529411764705885" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="highlighted" backgroundImage="button_common_down"/>
-                    <connections>
-                        <action selector="onBtnLoginClick:" destination="-1" eventType="touchUpInside" id="hLh-Vy-spe"/>
-                    </connections>
-                </button>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="EfV-aP-fiP">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="566"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入用户名" textAlignment="center" minimumFontSize="17" id="u3A-ST-cKY">
+                            <rect key="frame" x="20" y="158" width="280" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            <connections>
+                                <action selector="doneClick:" destination="-1" eventType="editingDidEndOnExit" id="MFf-bB-QGh"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入密码" textAlignment="center" minimumFontSize="17" id="zoN-xC-D0q">
+                            <rect key="frame" x="20" y="203" width="280" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                            <connections>
+                                <action selector="doneClick:" destination="-1" eventType="editingDidEndOnExit" id="9xQ-2L-Xxa"/>
+                            </connections>
+                        </textField>
+                        <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="rl7-r7-Y6Q">
+                            <rect key="frame" x="20" y="259" width="280" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="登录" backgroundImage="button_white">
+                                <color key="titleColor" red="0.058823529411764705" green="0.83529411764705885" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" backgroundImage="button_common_down"/>
+                            <connections>
+                                <action selector="onBtnLoginClick:" destination="-1" eventType="touchUpInside" id="hLh-Vy-spe"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" id="r0C-UL-ZIr">
+                            <rect key="frame" x="320" y="0.0" width="320" height="480"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="button_white" id="Oyl-GK-Udc">
+                                    <rect key="frame" x="8" y="315" width="304" height="114"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="button_white" id="dZb-Rz-2iu">
+                                    <rect key="frame" x="8" y="106" width="304" height="114"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入AppKey" minimumFontSize="10" clearButtonMode="whileEditing" id="jOF-zK-jmp">
+                                    <rect key="frame" x="8" y="237" width="304" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <action selector="doneClick:" destination="-1" eventType="editingDidEndOnExit" id="eEW-7n-Ou6"/>
+                                    </connections>
+                                </textField>
+                                <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="U44-8Q-WSV">
+                                    <rect key="frame" x="8" y="442" width="304" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <state key="normal" title="保存" backgroundImage="button_white">
+                                        <color key="titleColor" red="0.058823529409999999" green="0.83529411760000005" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted" backgroundImage="button_common_down"/>
+                                    <connections>
+                                        <action selector="saveSettingClick:" destination="-1" eventType="touchUpInside" id="nWK-QF-NkV"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hJq-Ju-Rhm">
+                                    <rect key="frame" x="212" y="277" width="100" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <state key="normal" title="删除" backgroundImage="button_white">
+                                        <color key="titleColor" red="0.058823529409999999" green="0.83529411760000005" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="deleteAppkeyClick:" destination="-1" eventType="touchUpInside" id="RVT-MY-51o"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9Cm-wJ-Fmw">
+                                    <rect key="frame" x="8" y="277" width="100" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <state key="normal" title="添加" backgroundImage="button_white">
+                                        <color key="titleColor" red="0.058823529409999999" green="0.83529411760000005" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="addAppkeyClick:" destination="-1" eventType="touchUpInside" id="I7l-bh-oEN"/>
+                                    </connections>
+                                </button>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="30" sectionHeaderHeight="22" sectionFooterHeight="22" id="54C-GC-gom">
+                                    <rect key="frame" x="8" y="322" width="304" height="100"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-1" id="sxS-D0-NV0"/>
+                                        <outlet property="delegate" destination="-1" id="Pdr-Mo-C3y"/>
+                                    </connections>
+                                </tableView>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="服务器地址" minimumFontSize="17" clearButtonMode="whileEditing" id="Vfu-tq-FT4">
+                                    <rect key="frame" x="8" y="30" width="187" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                    <connections>
+                                        <action selector="doneClick:" destination="-1" eventType="editingDidEndOnExit" id="58P-xE-bPJ"/>
+                                    </connections>
+                                </textField>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="端口" minimumFontSize="17" clearButtonMode="whileEditing" id="Vpr-fd-YFN">
+                                    <rect key="frame" x="212" y="30" width="100" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                    <connections>
+                                        <action selector="doneClick:" destination="-1" eventType="editingDidEndOnExit" id="9bc-xN-vUk"/>
+                                    </connections>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bgz-cn-UaG">
+                                    <rect key="frame" x="200" y="34" width="11" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Yyv-io-bLo">
+                                    <rect key="frame" x="212" y="68" width="100" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <state key="normal" title="删除" backgroundImage="button_white">
+                                        <color key="titleColor" red="0.058823529409999999" green="0.83529411760000005" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="deleteServerClick:" destination="-1" eventType="touchUpInside" id="wmI-66-U15"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UUo-bq-Tsg">
+                                    <rect key="frame" x="8" y="68" width="100" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <state key="normal" title="添加" backgroundImage="button_white">
+                                        <color key="titleColor" red="0.058823529409999999" green="0.83529411760000005" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="addServerClick:" destination="-1" eventType="touchUpInside" id="hzm-RK-Ckb"/>
+                                    </connections>
+                                </button>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="30" sectionHeaderHeight="22" sectionFooterHeight="22" id="zAN-C8-hmP">
+                                    <rect key="frame" x="8" y="113" width="304" height="100"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-1" id="ZlC-mg-ueZ"/>
+                                        <outlet property="delegate" destination="-1" id="6Ge-1d-jdF"/>
+                                    </connections>
+                                </tableView>
+                            </subviews>
+                        </view>
+                    </subviews>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" red="0.058823529409999999" green="0.83529411760000005" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
     <resources>
-        <image name="button_common_down" width="16" height="16"/>
-        <image name="button_white" width="10" height="10"/>
+        <image name="button_common_down" width="42" height="28"/>
+        <image name="button_white" width="11" height="28"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

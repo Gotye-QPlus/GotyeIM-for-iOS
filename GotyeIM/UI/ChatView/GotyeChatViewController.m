@@ -21,12 +21,14 @@
 #import "GotyeRealTimeVoiceController.h"
 #import "GotyeUserInfoController.h"
 
-#import "iflyMSC/IFlySpeechRecognizerDelegate.h"
-#import "iflyMSC/IFlySpeechRecognizer.h"
-#import "iflyMSC/IFlySpeechConstant.h"
+#import "BDVoiceRecognitionClient.h"
+#import "BDVRFileRecognizer.h"
+#import "JSONKit.h"
 
+#define BD_API_KEY @"oKUHg75KeH787zPesCSEAGPw"
+#define BD_SECRET_KEY @"dIR5nZGZreIUZpfnMRmVDBbBDIGtZlLK"
 
-@interface GotyeChatViewController () <GotyeOCDelegate, IFlySpeechRecognizerDelegate, UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface GotyeChatViewController () <GotyeOCDelegate, UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MVoiceRecognitionClientDelegate>
 {
     GotyeOCChatTarget* chatTarget;
     
@@ -45,9 +47,8 @@
     BOOL haveMoreData;
     NSString *tempImagePath;
     
-    IFlySpeechRecognizer * iFlySpeechRecognizer;
     GotyeOCMessage *decodingMessage;
-    NSString *iFlyResult;
+    BDVRRawDataRecognizer *rawDataRecognizer;
 }
 
 @end
@@ -150,11 +151,6 @@
     
     [self reloadHistorys:NO];
     
-    iFlySpeechRecognizer = [IFlySpeechRecognizer sharedInstance];
-    iFlySpeechRecognizer.delegate = self;
-    [iFlySpeechRecognizer setParameter:@"iat" forKey:[IFlySpeechConstant IFLY_DOMAIN]];
-    [iFlySpeechRecognizer setParameter:@"plain" forKey:[IFlySpeechConstant RESULT_TYPE]];
-    [iFlySpeechRecognizer setParameter:@"8000" forKey:[IFlySpeechConstant SAMPLE_RATE]];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -616,7 +612,7 @@
 {
     if(group.id == chatTarget.id && chatTarget.type == GotyeChatTargetTypeGroup)
     {
-        [GotyeOCAPI deleteSession:group];
+        [GotyeOCAPI deleteSession:group alsoRemoveMessages: NO];
         [GotyeUIUtil popToRootViewControllerForNavgaion:self.navigationController animated:YES];
     }
 }
@@ -669,10 +665,17 @@
     }
     
     decodingMessage = message;
-    [iFlySpeechRecognizer setParameter:IFLY_AUDIO_SOURCE_STREAM forKey:@"audio_source"];
-    BOOL ret = [iFlySpeechRecognizer startListening];
     
-    if (ret) {
+    // 设置开发者信息，必须修改API_KEY和SECRET_KEY为在百度开发者平台申请得到的值，否则示例不能工作
+    [[BDVoiceRecognitionClient sharedInstance] setApiKey:BD_API_KEY withSecretKey:BD_SECRET_KEY];
+    // 设置是否需要语义理解，只在搜索模式有效
+    [[BDVoiceRecognitionClient sharedInstance] setConfig:@"nlu" withFlag:YES];
+    
+    // 数据识别
+    rawDataRecognizer = [[BDVRRawDataRecognizer alloc] initRecognizerWithSampleRate:8000 property:EVoiceRecognitionPropertyInput delegate:self];
+    
+    int status = [rawDataRecognizer startDataRecognition];
+    if (status == EVoiceRecognitionStartWorking) {
         //启动发送数据线程
         //    [self sendAudioThread];
         [NSThread detachNewThreadSelector:@selector(sendAudioThread) toTarget:self withObject:nil];
@@ -684,95 +687,100 @@
 {
     NSLog(@"sendAudioThread[IN]");
     
+    int hasReadFileSize = 0;
     //从文件中读取音频
-    NSData *data = [NSData dataWithContentsOfFile:decodingMessage.media.pathEx];
-    
-    int count = 10;
-    unsigned long audioLen = data.length/count;
-    
-    //分割音频
-    for (int i =0 ; i< count-1; i++) {
-        char * part1Bytes = malloc(audioLen);
-        NSRange range = NSMakeRange(audioLen*i, audioLen);
-        [data getBytes:part1Bytes range:range];
-        NSData * part1 = [NSData dataWithBytes:part1Bytes length:audioLen];
-        //写入音频，让SDK识别
-        int ret = [iFlySpeechRecognizer writeAudio:part1];
-        free(part1Bytes);
-        
-        //检测数据发送是否正常
-        if(!ret)
+    int sizeToRead = 8000 * 0.080 * 16 / 8;
+    while (YES) {
+        NSFileHandle *fileHandle = [NSFileHandle fileHandleForReadingAtPath:decodingMessage.media.pathEx];
+        [fileHandle seekToFileOffset:hasReadFileSize];
+        NSData* data = [fileHandle readDataOfLength:sizeToRead];
+        [fileHandle closeFile];
+        hasReadFileSize += [data length];
+        if ([data length]>0)
         {
-            NSLog(@"sendAudioThread[ERROR]");
-            
-            [iFlySpeechRecognizer stopListening];
-            
-            return;
+            [rawDataRecognizer sendDataToRecognizer:data];
+        }
+        else
+        {
+            [rawDataRecognizer allDataHasSent];
+            break;
         }
     }
-    
-    //处理最后一部分
-    unsigned long writtenLen = audioLen * (count-1);
-    char * part3Bytes = malloc(data.length-writtenLen);
-    NSRange range = NSMakeRange(writtenLen, data.length-writtenLen);
-    [data getBytes:part3Bytes range:range];
-    NSData * part3 = [NSData dataWithBytes:part3Bytes length:data.length-writtenLen];
-    
-    [iFlySpeechRecognizer writeAudio:part3];
-    
-    free(part3Bytes);
-    
-    //音频数据写入完成，进入等待状态
-    [iFlySpeechRecognizer stopListening];
     
     NSLog(@"sendAudioThread[OUT]");
 }
 
-/**
- * @fn      onResults
- * @brief   识别结果回调
- *
- * @param   result      -[out] 识别结果，NSArray的第一个元素为NSDictionary，NSDictionary的key为识别结果，value为置信度
- * @see
- */
-- (void) onResults:(NSArray *) results isLast:(BOOL)isLast
+- (void)VoiceRecognitionClientWorkStatus:(int) aStatus obj:(id)aObj
 {
-    NSMutableString *resultString = [[NSMutableString alloc] init];
-    
-    NSDictionary *dic = results[0];
-    
-    for (NSString *key in dic) {
-        [resultString appendFormat:@"%@",key];
-    }
-    
-    if(iFlyResult != nil)
-        iFlyResult = [NSString stringWithFormat:@"%@%@", iFlyResult, resultString];
-    else
-        iFlyResult = resultString;
-    
-    if (isLast)
+    switch (aStatus)
     {
-        if(iFlyResult != nil && ![iFlyResult isEqualToString:@""])
+        case EVoiceRecognitionClientWorkStatusFinish:
         {
-            const char* str = [iFlyResult cStringUsingEncoding:NSUTF8StringEncoding];
-            [decodingMessage putExtraData:(void*)str len:strlen(str)];
-            iFlyResult = nil;
+            NSMutableString *tmpString;
+            if ([[BDVoiceRecognitionClient sharedInstance] getRecognitionProperty] != EVoiceRecognitionPropertyInput)
+            {
+                NSMutableArray *audioResultData = (NSMutableArray *)aObj;
+                tmpString = [[NSMutableString alloc] initWithString:@""];
+                
+                for (int i=0; i<[audioResultData count]; i++)
+                {
+                    [tmpString appendFormat:@"%@\r\n",[audioResultData objectAtIndex:i]];
+                }
+            }
+            else
+            {
+                tmpString = [[NSMutableString alloc] initWithString:@""];
+                for (NSArray *result in aObj)
+                {
+                    NSDictionary *dic = [result objectAtIndex:0];
+                    NSString *candidateWord = [[dic allKeys] objectAtIndex:0];
+                    [tmpString appendString:candidateWord];
+                }
+            }
+            
+            NSDictionary *resultDic = [tmpString objectFromJSONString];
+            NSArray *resultArray = [resultDic objectForKey:@"item"];
+            NSString *resultString = [resultArray objectAtIndex:0];
+            
+            if(resultString != nil && ![resultString isEqualToString:@""])
+            {
+                const char* str = [resultString cStringUsingEncoding:NSUTF8StringEncoding];
+                [decodingMessage putExtraData:(void*)str len:strlen(str)];
+            }
+            
+            [GotyeOCAPI sendMessage:decodingMessage];
+            decodingMessage = nil;
+            
+            NSLog(@"识别完成");
+            break;
         }
-        
-        [GotyeOCAPI sendMessage:decodingMessage];
-        decodingMessage = nil;
+        case EVoiceRecognitionClientWorkStatusFlushData:
+        {
+//            NSMutableString *tmpString = [[NSMutableString alloc] initWithString:@""];
+//            
+//            [tmpString appendFormat:@"%@",[aObj objectAtIndex:0]];
+//            
+//            break;
+        }
+        case EVoiceRecognitionClientWorkStatusReceiveData:
+        {
+//            if ([[BDVoiceRecognitionClient sharedInstance] getRecognitionProperty] == EVoiceRecognitionPropertyInput)
+//            {
+//                NSString *tmpString = [self composeInputModeResult:aObj];
+//
+//            }
+            
+            break;
+        }
+        case EVoiceRecognitionClientWorkStatusEnd:
+        {
+            break;
+        }
+        default:
+        {
+            break;
+        }
     }
-}
-
-/**
- * @fn      onError
- * @brief   识别结束回调
- *
- * @param   errorCode   -[out] 错误类，具体用法见IFlySpeechError
- */
-- (void) onError:(IFlySpeechError *) error
-{
-
 }
 
 #pragma mark - table delegate & data

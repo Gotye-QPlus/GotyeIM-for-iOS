@@ -12,8 +12,6 @@
 #import "GotyeUIUtil.h"
 #import "GotyeOCAPI.h"
 
-#import "iflyMSC/IFlySpeechUtility.h"
-
 @implementation GotyeAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -37,19 +35,36 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    [GotyeOCAPI init:/*@"ccbfcd8e-4393-482c-9808-69dce84015d8"*/@"9c236035-2bf4-40b0-bfbf-e8b6dec54928"  packageName:@"gotyeimapp"];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *selectedAppKey = [userDefaults stringForKey:AppkeySelectedKey];
+    if(selectedAppKey == nil || selectedAppKey.length == 0)
+    {
+        selectedAppKey = /*@"ccbfcd8e-4393-482c-9808-69dce84015d8"*/@"9c236035-2bf4-40b0-bfbf-e8b6dec54928";
+        NSMutableArray *recentAppkey = [NSMutableArray arrayWithArray:[userDefaults arrayForKey:AppkeyRecentKey]];
+        if(recentAppkey == nil) recentAppkey = [NSMutableArray array];
+        if(![recentAppkey containsObject:selectedAppKey])
+        {
+            [recentAppkey addObject:selectedAppKey];
+            [userDefaults setObject:recentAppkey forKey:AppkeyRecentKey];
+        }
+        [userDefaults setObject:selectedAppKey forKey:AppkeySelectedKey];
+        [userDefaults synchronize];
+    }
     
-    NSLog(@"api verison: %@", [GotyeOCAPI getVersion]);
+    [GotyeOCAPI init:selectedAppKey  packageName:@"gotyeimapp"];
     
-    //创建语音配置,appid必须要传入，仅执行一次则可
-    NSString *initString = [[NSString alloc] initWithFormat:@"appid=%@,timeout=%@", @"548571bd", @"20000"];
-    
-    //所有服务启动前，需要确保执行createUtility
-    [IFlySpeechUtility createUtility:initString];
-
-    
+#ifdef __IPHONE_8_0
+#if __IPHONE_8_0 <= __IPHONE_OS_VERSION_MAX_ALLOWED
+    if ([[[UIDevice currentDevice]systemVersion]floatValue] >= 8.0) {
+        [application registerForRemoteNotifications];
+        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert) categories:nil]];
+    } else {
+        [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound];
+    }
+#endif
+#else
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound];
-//    [GotyeHistoryManager defaultManager];
+#endif
     
     return YES;
 }

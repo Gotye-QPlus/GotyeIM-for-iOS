@@ -144,7 +144,7 @@
     {
         [GotyeUIUtil popToRootViewControllerForNavgaion:self.navigationController animated:YES];
         
-        [GotyeOCAPI deleteSession:group];
+        [GotyeOCAPI deleteSession:group alsoRemoveMessages:NO];
     }
 }
 
@@ -154,7 +154,7 @@
     {
         [GotyeUIUtil popToRootViewControllerForNavgaion:self.navigationController animated:YES];
         
-        [GotyeOCAPI deleteSession:group];
+        [GotyeOCAPI deleteSession:group alsoRemoveMessages: NO];
     }
 }
 
